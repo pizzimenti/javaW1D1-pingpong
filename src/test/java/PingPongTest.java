@@ -1,4 +1,5 @@
 import org.junit.*;
+import java.util.*;
 import static org.junit.Assert.*;
 
 public class PingPongTest {
@@ -19,5 +20,15 @@ public class PingPongTest {
   public void isPing_forNumberDivisibleByThree_true() {
     PingPong testPingPong = new PingPong();
     assertEquals(true, testPingPong.isPing(6));
+  }
+  
+  @Test
+  public void spawnsArray_forNumbersFromZeroToNumber_intArray() {
+    PingPong testPingPong = new PingPong();
+
+    ArrayList<Integer> myList = new ArrayList<Integer>();
+    myList.add(1);
+    myList.add(2);
+    assertEquals(myList, testPingPong.spawnArray(2));
   }
 }
