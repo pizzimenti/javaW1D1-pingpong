@@ -21,7 +21,7 @@ public class PingPongTest {
     PingPong testPingPong = new PingPong();
     assertEquals(true, testPingPong.isPing(6));
   }
-  
+
   @Test
   public void spawnsArray_forNumbersFromZeroToNumber_intArray() {
     PingPong testPingPong = new PingPong();

@@ -27,4 +27,8 @@ public class PingPong {
       }
       return intArray;
     }
+
+    public ArrayList pingPongArray(ArrayList intArray)
+    ArrayList<Object> pingPongArray = new ArrayList<Object>();
+
 }
