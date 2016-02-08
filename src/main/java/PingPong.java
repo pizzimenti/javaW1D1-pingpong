@@ -19,16 +19,21 @@ public class PingPong {
       return number % 3 == 0;
     }
 
-    public ArrayList spawnArray(Integer number) {
-      //code for returning an ArrayList of integers between 1 and number
-      ArrayList<Integer> intArray = new ArrayList<Integer>();
+    public ArrayList pingPongArray(Integer number) {
+      ArrayList<Object> pingPongArray = new ArrayList<Object>();
       for (int i = 1; i <= number; i++) {
-        intArray.add(i);
-      }
-      return intArray;
-    }
 
-    public ArrayList pingPongArray(ArrayList intArray)
-    ArrayList<Object> pingPongArray = new ArrayList<Object>();
+        if (isPingPong(i)) {
+          pingPongArray.add("pingpong");
+        } else if (isPong(i)) {
+          pingPongArray.add("pong");
+        } else if (isPing(i)) {
+          pingPongArray.add("ping");
+        } else {
+          pingPongArray.add(i);
+        }
+      }
+      return pingPongArray;
+    }
 
 }

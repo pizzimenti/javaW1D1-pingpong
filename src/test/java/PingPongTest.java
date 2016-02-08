@@ -23,12 +23,24 @@ public class PingPongTest {
   }
 
   @Test
-  public void spawnsArray_forNumbersFromZeroToNumber_intArray() {
+  public void copiesArrayWithStrings_thatMatchPingPongTests_pingPongArray() {
     PingPong testPingPong = new PingPong();
-
-    ArrayList<Integer> myList = new ArrayList<Integer>();
+    ArrayList<Object> myList = new ArrayList<Object>();
     myList.add(1);
     myList.add(2);
-    assertEquals(myList, testPingPong.spawnArray(2));
+    myList.add("ping");
+    myList.add(4);
+    myList.add("pong");
+    myList.add("ping");
+    myList.add(7);
+    myList.add(8);
+    myList.add("ping");
+    myList.add("pong");
+    myList.add(11);
+    myList.add("ping");
+    myList.add(13);
+    myList.add(14);
+    myList.add("pingpong");
+    assertEquals(myList, testPingPong.pingPongArray(15));
   }
 }
